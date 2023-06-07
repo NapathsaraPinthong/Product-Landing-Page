@@ -24,7 +24,7 @@ header {
     position: fixed;
     top: 0;
     background-color: #eee;
-
+    box-shadow: 0 1px 4px #000;
 }
 
 #header-img {
@@ -35,19 +35,26 @@ header {
     width: 23rem;
     display: flex;
     justify-content: space-between;
+    margin-left: 5rem;
 }
 
 #nav-bar a {
     text-decoration: none;
     color: #000;
+    border-bottom: 3px solid transparent;
 }
 
 #nav-bar a:hover {
     border-bottom: 3px solid #ff8c00;
 }
 
+.contrainer {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
 .hero-con {
-    width: 40%;
+    width: 50%;
     margin: 130px auto 50px;
     text-align: center;
     display: flex;
@@ -74,9 +81,13 @@ header {
     cursor: pointer;
 }
 
+.hero-header {
+    width: max-content;
+}
+
 .features-con {
     margin: 0 auto;
-    width: 70%;
+    width: 90%;
 }
 
 .feature-block {
@@ -94,7 +105,7 @@ header {
 }
 
 .feature-info {
-    margin-left: 2rem;
+    margin-left: 1rem;
     padding: 1.9rem 0;
     width: 100%;
 }
@@ -103,4 +114,114 @@ header {
     display: flex;
     justify-content: center;
     margin: 2.5rem;
+}
+
+.product-con {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5rem auto;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+}
+
+.product {
+    border: 1px solid #000;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 2rem;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.product h3 {
+    background-color: #ddd;
+    padding: 10px 0;
+    font-size: 1.1rem;
+}
+
+.product h2 {
+    margin: 10px 0;
+}
+
+.product button {
+    background-color: #f1c40f;
+    border: 0;
+    padding: 10px 1.5rem;
+    font-size: 1rem;
+    font-weight: 900;
+    margin: 1.3rem 0;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.product button:hover {
+    background-color: #ff8c00;
+}
+
+footer {    
+    height: 82px;
+    background-color: #ddd;
+    padding: 20px;
+    text-align: right;
+}
+footer a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 15px;
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        padding: 20px 1rem;
+    }
+    .product-con {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #nav-bar {
+        margin-left: 3rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #nav-bar {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 0.2rem;
+    }
+    .hero {
+        margin-top: 9rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    #nav-bar {
+        margin: 0;
+    }
+    .hero {
+        margin-top: 12rem;
+    }
+
+    .feature-block {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .feature-info {
+        padding-top: 0;
+    }
 }
