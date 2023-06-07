@@ -73,8 +73,7 @@ header {
 }
 
 .hero-con input[type='submit'] {
-    padding: 5px;
-    width: 150px;
+    padding: 10px 15px;
     background-color: #f1c40f;
     font-weight: 900;
     font-size: 1rem;
@@ -82,6 +81,7 @@ header {
     border-radius: 3px;
     cursor: pointer;
     color: #000;
+    text-align: center;
 }
 
 .hero-header {
@@ -236,5 +236,6 @@ footer p {
 
     .feature-info {
         padding-top: 0;
+        margin-left: 0;
     }
 }
